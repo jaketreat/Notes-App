@@ -1,11 +1,14 @@
+import { useState } from "react";
 import './App.css';
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
 
 function App() {
+  const [notes, setNotes] = useState([]);
+
   return (
     <div className="App">
-      <Sidebar />
+      <Sidebar notes={notes}/>
       <Main />
     </div>
   );
