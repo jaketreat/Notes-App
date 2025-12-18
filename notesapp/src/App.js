@@ -6,6 +6,10 @@ import Main from "./components/Main";
 function App() {
   const [notes, setNotes] = useState([]);
 
+  const onAddNote = () => {
+    console.log('add');
+  }
+
   return (
     <div className="App">
       <Sidebar notes={notes}/>
