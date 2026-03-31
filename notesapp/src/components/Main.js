@@ -1,4 +1,5 @@
-function Main () {
+function Main ({ activeNote }) {
+    if (!activeNote) return <div className="no-active-note">No Active Note</div>
     return (
         <div className="app-main">
             <div className="app-main-note-edit">
@@ -13,9 +14,9 @@ function Main () {
                 />
             </div>
             <div className="app-main-note-preview">
-                <h1 className="preview-title">TITLE</h1>
+                <h1 className="preview-title">{activeNote.title}</h1>
                 <div className="markdown-preview">
-                    Note preview
+                    {activeNote.body}
                 </div>
             </div>
         </div>
